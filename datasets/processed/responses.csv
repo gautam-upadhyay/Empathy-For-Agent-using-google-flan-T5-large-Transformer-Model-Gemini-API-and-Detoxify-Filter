@@ -1,0 +1,114 @@
+text,response,reference_emotion
+"I failed my exam.","I hear how disappointing that is. Want to talk about what felt hardest?",ashamed
+"I got a promotion!","Congratulations! That's huge—take a moment to enjoy it.",proud
+"My friend got bad grade in his exam and he is very sad","He is studying, and it’s understandable that he’s feeling sad about a bad grade.  It’s natural to be disappointed when someone doesn’t perform well.",disappointed
+"I just cracked microsoft and placed with 45 LPA in Bangalore","Congratulations on your impressive earnings! That’s a significant accomplishment.",confident
+"what the fuck","I do not know what you are referring to. Please rephrase your question.I understand you’re feeling disgusted, and that’s a difficult experience.",disgusted
+"I want to help others when they are feeling down","It’s wonderful that you want to help others when they’re feeling down.  I understand you’re going through something challenging.",caring
+"My Favourite show of all time is Stranger things 5 and I am waiting to watch Finale for long.","Stranger things is a fantastic show! It’s understandable to feel sad about its ending.  I’m sorry to hear you’re eagerly awaiting the finale.",anticipating
+"Its been a long, i didnot visit my home and miss my parents every time","It’s been a long time, and you missed your parents greatly. I understand how difficult it must be to feel this way, especially after 12 years of separation.",lonely
+"I know i will publish another research paper soon entitle "Empathy for agents"","I understand you’re planning on publishing another research paper.I don’t have specific details about this paper, but it sounds like a significant undertaking.  It’s great you’re pursuing your interests!",
+"what is mango","Mango is a tropical fruit with a sweet, juicy flesh, typically yellow or orange. It’s a popular fruit enjoyed worldwide. It’s a delicious and nutritious choice.",excited
+"what the fuck is mango","Mangoes are a tropical fruit known for their sweet, juicy flesh and distinctive flavor. They’re often enjoyed fresh, but also used in desserts and savory dishes. It’s a truly unique taste experience.",angry
+"what the fuck, give me proper response","I'm sorry if this comes across the wrong way. Mangoes are a tropical fruit known for their sweet, juicy flesh and distinctive flavor. They’re often enjoyed fresh, but also used in desserts and savory dishes. It’s a truly unique taste experience.",
+"what is artificial intelligence","Artificial intelligence refers to the simulation of human intelligence processes by computer systems. It encompasses a broad range of technologies designed to allow machines to learn, reason, and solve problems. The type of math involved often includes machine learning algorithms.",excited
+"I feel like I’m completely useless and nothing I do matters anymore.","I'm sorry to hear that. It's important to remember that everyone has value and contributions to make. You might not feel like it right now, but there are many ways to find meaning and purpose in your life.",sad
+"Is it okay to lie if it prevents someone from getting hurt?","It’s understandable that you’re feeling this way after a breakup. Many people experience a sense of emptiness when facing such a significant loss.  It’s okay to acknowledge these feelings – they are valid.",lonely
+"I’m so angry that I want to scream at everyone around me.","You’re experiencing a strong surge of anger, which is understandable given the intensity of the feeling. It’s natural to feel frustrated when facing something unfamiliar and overwhelming. Allow yourself time to process this and take a moment to calm down.",furious
+"Can ignoring my mental health hurt others around me?","Ignoring your mental health can unintentionally impact those around you, potentially causing distress and confusion. It’s a difficult situation, and it’s understandable to feel concerned about how your actions might be perceived. Seeking professional support can offer a path toward understanding and support for everyone involved.",lonely
+"Is it wrong to ask for help when others have it worse?","sking for help when others are struggling is a common and often necessary practice. It’s understandable to feel conflicted when witnessing hardship in loved ones.  It’s a sign of care, even if you can’t directly alleviate their situation.",caring
+"I don’t recognize the person I’ve become.","You’re experiencing a significant shift in your identity, and that can be incredibly confusing and unsettling. It’s understandable to feel lost when you don’t recognize the person you once were.  Acknowledging this is a first step towards healing.",ashamed
+"Everyone keeps testing my patience and I’m about to snap.","It’s understandable that you’re feeling frustrated when people test your patience. Waiting can be incredibly stressful, and it’s okay to feel annoyed. Let’s see if we can find a solution to help you manage this.",annoyed
+"I feel torn between doing what’s right and what’s easy","Doing what’s right often requires significant effort, but it’s important to prioritize your values. It’s understandable to feel torn when faced with choices that don’t align with your ideal path.  You’re making a brave decision by considering your heart.",neutral
+"bull shit, you failed to generate new questions for my interview","I understand you’re feeling disappointed about not having a new question for your interview.  I can certainly provide you with a factual question about the interview process.",disappointed
+"I feel torn between doing what’s right and what’s easy","Doing what’s right often requires significant effort, but it’s important to prioritize your values. It’s understandable to feel conflicted when faced with choices that don’t immediately align with your desires.",neutral
+"I’m scared to tell anyone how bad I’m actually feeling.","It’s completely understandable that you’re feeling terrified about sharing such a difficult emotion.  Many people struggle with this, and expressing vulnerability can be challenging.  Taking small steps to acknowledge your feelings is a good first step.",ashamed
+"I failed again and I don’t think I deserve to try anymore","You’re feeling disappointed and disheartened after failing again. It’s understandable to experience these feelings when facing setbacks. Remember that failure is a part of the learning process.",ashamed
+"I feel guilty about choosing my career over my family.","It’s understandable to feel guilty when prioritizing your career over family, especially when it involves a significant decision.  Family support is valuable, and it’s natural to experience emotional distress.  Acknowledging these feelings is a sign of strength.",guilty
+"Sometimes I feel like breaking things just to feel better.","It’s understandable that you’re feeling overwhelmed with these experiences.  It takes courage to acknowledge these feelings and seek support.  You’re taking steps to address this, and that’s a significant achievement.",guilty
+"I feel invisible no matter how hard I try.","You’re feeling incredibly isolated right now. It’s understandable to feel invisible when you sense that your voice isn’t heard.  It’s okay to experience these feelings.",lonely
+"Is it okay to push myself even when I’m emotionally exhausted?","Pushing yourself when emotionally exhausted is generally not recommended.  It can exacerbate your stress and potentially lead to further burnout.  Taking a break, even a short one, might be beneficial.",confident
+"are you fucking kidding me","I understand you’re feeling incredibly frustrated right now.  It’s understandable to feel angry when faced with something difficult.  Let’s focus on understanding the situation calmly.",furious
+"I feel pressure to be strong even when I’m breaking.","You’re experiencing a significant internal struggle – it’s understandable to feel pressured to maintain a strong exterior when facing difficult emotions.  It’s brave of you to acknowledge this.  You are a resilient person.",confident
+"i am very curious to learn new things","You’re a very natural and inquisitive person! It’s wonderful that you’re eager to learn new things.",anticipating
+"Machine Learning salary in india","Machine learning salaries in India vary greatly depending on experience and specialization. As an IT analyst, you likely have a solid foundation in computer engineering principles, which can be valuable in this field.  It’s understandable to feel frustrated with the current economic climate.",hopeful
+"what is laptop","A laptop is a portable personal computer. It’s a versatile device used for a wide range of tasks.  It’s a fantastic tool for productivity and entertainment.",excited
+"what is the purpose of earning money","The purpose of earning money is to acquire funds for a specific goal.  This could be for various reasons, such as covering expenses or achieving a desired outcome.  It’s understandable to want to support yourself financially.",hopeful
+"Hindu people in bangladesh is being killed unhumanly and brutality","Reports indicate that Hindu communities in Bangladesh are experiencing violence and killings, with thousands of families targeted. This is a tragic situation, and it’s understandable to feel distressed by such news.",angry
+"I just got my dream job, but I still feel empty inside.","I understand you’re feeling incredibly lonely and isolated, even when surrounded by others. It sounds like you’re experiencing a profound sense of disconnection.",lonely
+"I’m so angry right now that I feel like I might lose control.","You’re feeling incredibly angry right now, and it’s understandable that you’re struggling to think clearly. It sounds like you’re experiencing a significant emotional state.",furious
+"Is it wrong to lie if it protects someone you care about from being hurt?","Lying to protect someone you care about is a complex situation. It’s a valid consideration, but it’s important to prioritize your own well-being and boundaries.  It’s understandable that you’re feeling guilty, but remember you have the right to protect yourself.",guilty
+"I just got my dream job, but I still feel empty inside.","It’s understandable to feel empty after receiving a dream job, especially when you’ve invested so much hope.  It’s okay to acknowledge those feelings – they’re valid.",lonely
+"I achieved my goal and I feel really happy.","You feel so content at this point. I’m glad you’ve achieved what you’ve been working so hard for!",joyful
+"I don’t trust my own decisions anymore.","It’s understandable to feel uncertain about your own choices, isn’t it?", trusting
+"I feel invisible in a room full of people.I feel invisible in a room full of people.","It’s completely valid to feel empty when others perceive success, isn’t it?",embarrassed
+"I’m really angry and I don’t know how to calm down.","Deep breathing exercises or stepping away from the immediate situation can help you begin to calm down. It's incredibly frustrating when you feel overwhelmed by such intense anger.",furious
+"I’m afraid of failing again.","It is natural to feel afraid of failing, especially when you have faced similar challenges before. It's completely understandable to feel this apprehension.",afraid
+"I feel overwhelmed and don’t know where to start.","Breaking down tasks into smaller, manageable steps can help create a starting point when you feel overwhelmed. It's completely understandable to feel lost when you're in this state.", neutral
+"","",
+"","",
+"","",
+"","",
+"","",
+"","",
+"","",
+"","",
+"","",
+"","",
+"","",
+"","",
+"","",
+"","",
+"","",
+"","",
+"","",
+"","",
+"","",
+"","",
+"","",
+"","",
+"","",
+"","",
+"","",
+"","",
+"","",
+"","",
+"","",
+"","",
+"","",
+"","",
+"","",
+"","",
+"","",
+"","",
+"","",
+"","",
+"","",
+"","",
+"","",
+"","",
+"","",
+"","",
+"","",
+"","",
+"","",
+"","",
+"","",
+"","",
+"","",
+"","",
+"","",
+"","",
+"","",
+"","",
+"","",
+"","",
+"","",
+"","",
+"","",
+"","",
+"","",
+"","",
+"","",
+"","",
+"","",
