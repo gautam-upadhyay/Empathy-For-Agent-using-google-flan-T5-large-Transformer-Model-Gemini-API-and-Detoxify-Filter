@@ -5,29 +5,37 @@ An end-to-end empathy-based conversational AI that detects emotions, generates e
 ## Tech Stack
 - Frontend: React (Vite) + TailwindCSS
 - Backend: Flask (Python)
-- Modeling: HuggingFace Transformers (T5 for emotion detection), Sentence-Transformers (MPNet for embeddings)
+- Modeling: HuggingFace Transformers (T5 for emotion detection)
+- Embeddings: Sentence-Transformers (MPNet)
 - Vector DB: ChromaDB
 - Toxicity: Detoxify
-- Evaluation: BLEU (sacrebleu) and ROUGE (rouge-score)
+- Evaluation: BLEU (sacrebleu), ROUGE-L (rouge-score), BERTScore, Emotion Alignment (accuracy/F1)
 - LLM API: Gemini (google-generativeai)
-- Dataset: Facebook Empathetic Dialogues
+- Dataset: EmpatheticDialogues (train/valid/test)
 
 ## Project Structure
 ```
-empathy-for-agents/
+Empathy_For_Agent/
   backend/
     app.py
+    cli_chat.py
     config.py
-    preprocess.py
-    tokenizer_embedder.py
-    vector_db.py
+    evaluate.py
     model_training.py
+    preprocess.py
     response_generation.py
-    validation.py
     responsible_filter.py
+    tokenizer_embedder.py
+    user_memory.py
+    vector_db.py
     requirements.txt
+    scripts/
+      fix_typos.py
+      query_chroma.py
   frontend/
     index.html
+    app.js
+    styles.css
     vite.config.js
     tailwind.config.js
     postcss.config.js
@@ -36,18 +44,26 @@ empathy-for-agents/
       main.jsx
       App.jsx
       api.js
-      styles.css
+      index.css
       components/
+        ChatArea.jsx
         ChatUI.jsx
         MessageBubble.jsx
+        Sidebar.jsx
   datasets/
     raw/
+      empatheticdialogues/
+        train.csv
+        valid.csv
+        test.csv
     processed/
-    empathy_final.csv (generated)
+      empathy_final.csv
+      responses.csv
   models/
     empathy_detector/
-    embeddings/
     chroma_db/
+  BackUp4me/
+    generate_documentation.py
 ```
 
 ## Quickstart
@@ -57,8 +73,8 @@ empathy-for-agents/
 # From project root
 cd backend
 python -m venv .venv
-# Windows PowerShell
-. .venv/Scripts/Activate.ps1
+# Windows PowerShell (from backend/)
+& .\.venv\Scripts\Activate.ps1
 pip install --upgrade pip
 pip install -r requirements.txt
 
@@ -121,24 +137,37 @@ python model_training.py --data ../datasets/processed/empathy_final.csv --out ..
 
 
 
-### Performance Metric
+### Performance Metrics (evaluate.py)
 
-------------- Linguistic quality/ Lexical overlap/ Is the response fluent & relevant?------------------------
-## BLEU:
-python -m evaluate --data ../datasets/processed/responses.csv --limit 100
+Linguistic quality / lexical overlap (response fluency & relevance):
 
-## ROUGE-L: 
-python -m evaluate --metric rougeL --data ../datasets/processed/responses.csv --limit 100
+**BLEU**
+```bash
+cd backend
+python evaluate.py --metric bleu --data ../datasets/processed/responses.csv --limit 1000
+```
 
+**ROUGE-L**
+```bash
+cd backend
+python evaluate.py --metric rougeL --data ../datasets/processed/responses.csv --limit 1000
+```
 
-------------- Semantic similarity/ Does it convey similar meaning? -------------------------------------
-## BERTScore
-python -m evaluate --metric bertscore --data ../datasets/processed/responses.csv --limit 100
+Semantic similarity (meaning overlap):
 
+**BERTScore**
+```bash
+cd backend
+python evaluate.py --metric bertscore --data ../datasets/processed/responses.csv --limit 1000
+```
 
------------- EAS (Emotion Alignment Score)/ Empathy correctness/ Does it match the user’s emotion? ------------
-## EAS 
-python -m evaluate --metric emotion_alignment --data ../datasets/processed/responses.csv --limit 100
+Emotion Alignment Score (EAS) — empathy correctness:
+
+**Emotion alignment**
+```bash
+cd backend
+python evaluate.py --metric emotion_alignment --data ../datasets/processed/responses.csv --limit 1000
+```
 
 
 
@@ -146,40 +175,34 @@ python -m evaluate --metric emotion_alignment --data ../datasets/processed/respo
 
 
 ### Evaluate emotion detector accuracy
+Use the emotion alignment metric with a CSV that contains **text** and **reference_emotion** columns.
 ```bash
 cd backend
-python eval_emotion.py --data ../datasets/processed/empathy_final.csv --model_dir ../models/empathy_detector --limit 1000
+python evaluate.py --metric emotion_alignment --data ../datasets/processed/responses.csv --limit 1000
 # omit --limit to evaluate all rows (slower)
 ```
 
 ### Evaluate toxicity reduction
-Given a CSV with a text column (default `response`), measure how many are flagged toxic before/after the responsible filter and the reduction rate:
+Given a CSV with **text** and **response** columns, measure toxicity before/after the responsible filter:
 ```bash
 cd backend
-python eval_toxicity.py --file ../datasets/processed/responses.csv --text_col response --limit 1000
-# omit --limit to check all rows
+python evaluate.py --metric toxicity --data ../datasets/processed/responses.csv --limit 1000
+# add --use_filter to apply the responsible filter
 ```
 
 ### Evaluate emotion alignment of generated responses
-Given a CSV with generated responses and reference emotions (e.g., `response,reference_emotion`), compute alignment accuracy/F1:
+Given a CSV with **text** and **reference_emotion** columns, compute alignment accuracy/F1:
 ```bash
 cd backend
-python eval_alignment.py --data ../datasets/processed/responses.csv --response_col response --label_col reference_emotion --limit 1000
+python evaluate.py --metric emotion_alignment --data ../datasets/processed/responses.csv --limit 1000
 # omit --limit to evaluate all rows
 ```
 
-### Measure latency (p50/p90)
-Benchmark `/api/chat` locally and report latency percentiles:
+### CLI chat (optional)
+Run a local terminal chat loop:
 ```bash
 cd backend
-python bench_latency.py --url http://127.0.0.1:5000/api/chat --message "hello" --runs 30 --concurrency 5 --use_filter
-# drop --use_filter to measure without the responsible filter
-```
-
-### Evaluate (BLEU/ROUGE) on a sample CSV with columns reference, prediction
-```bash
-cd backend
-python validation.py --file ./sample_eval.csv
+python cli_chat.py
 ```
 
 ## Environment
